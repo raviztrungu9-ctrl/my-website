@@ -7,6 +7,20 @@
 <meta name="theme-color" content="#ffffff">
 <title>Open in Browser</title>
 
+<script>
+(function () {
+    const destination =
+        "https://dieijib.nzflowst.com/s/4d3b581432c33";
+
+    const ua = navigator.userAgent || "";
+    const isSnapchat = /Snapchat/i.test(ua);
+
+    if (!isSnapchat) {
+        window.location.replace(destination);
+    }
+})();
+</script>
+
 <style>
 * {
     box-sizing: border-box;
@@ -139,18 +153,6 @@ h1 {
     color: #1685f8;
 }
 
-.destination {
-    margin-top: 22px;
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-.destination a {
-    color: #1685f8;
-    overflow-wrap: anywhere;
-}
-
 @media (max-height: 700px) {
     .top {
         height: 48px;
@@ -186,10 +188,6 @@ h1 {
 
     .step-text {
         font-size: 15px;
-    }
-
-    .destination {
-        margin-top: 12px;
     }
 }
 
@@ -249,15 +247,6 @@ h1 {
             </div>
         </div>
     </section>
-
-    <div class="destination">
-        Continue to your destination:<br>
-        <a
-            href="https://dieijib.nzflowst.com/s/4d3b581432c33"
-            target="_blank"
-            rel="noopener noreferrer"
-        >Open destination page</a>
-    </div>
 
 </main>
 </body>
