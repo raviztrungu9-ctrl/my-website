@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Open in Browser</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Arial, sans-serif;
+    background: #fff;
+    color: #171717;
+}
+
+body {
+    min-height: 100svh;
+}
+
+.page {
+    width: 100%;
+    min-height: 100svh;
+    padding: max(8px, env(safe-area-inset-top)) 18px
+             max(12px, env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.top {
+    width: 100%;
+    height: 70px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.arrow {
+    color: #1685f8;
+    font-size: 54px;
+    font-weight: 300;
+    line-height: .85;
+}
+
+.tap {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 5px solid #6872f5;
+    overflow: hidden;
+    margin-top: 3px;
+    background: #f7f7ff;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin: 20px 0 0;
+    font-weight: 750;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #999;
+    margin: 15px 0 0;
+    max-width: 330px;
+}
+
+.instructions {
+    width: 100%;
+    max-width: 420px;
+    margin-top: 28px;
+    border: 2px solid #444;
+    border-radius: 24px;
+    padding: 17px 14px;
+    text-align: left;
+    background: #f5f5f5;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin: 5px 0 16px;
+}
+
+.step:last-child {
+    margin-bottom: 4px;
+}
+
+.number {
+    flex: 0 0 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e2edff;
+    color: #1685f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+.step-text {
+    font-size: 16px;
+    line-height: 1.4;
+    padding-top: 5px;
+}
+
+.blue {
+    color: #1685f8;
+}
+
+@media (max-height: 700px) {
+    .top {
+        height: 48px;
+    }
+
+    .arrow {
+        font-size: 42px;
+    }
+
+    .profile {
+        width: 95px;
+        height: 95px;
+    }
+
+    h1 {
+        margin-top: 15px;
+        font-size: 29px;
+    }
+
+    .description {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .instructions {
+        margin-top: 20px;
+        padding: 13px 12px;
+    }
+
+    .step {
+        margin-bottom: 12px;
+    }
+
+    .step-text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .instructions {
+        padding: 13px 10px;
+    }
+
+    .step-text {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+    <div class="top">
+        <div>
+            <div class="arrow">↗</div>
+            <div class="tap">TAP HERE</div>
+        </div>
+    </div>
+
+    <div class="profile">
+        <img
+            src="https://i.ibb.co/hJbsw2Nk/7f389520-7a78-4685-add4-801ab57120f7.jpg"
+            alt="Profile photo"
+        >
+    </div>
+
+    <h1>Open in browser</h1>
+
+    <p class="description">
+        To continue, open this page in Safari or Chrome.
+    </p>
+
+    <section class="instructions">
+        <div class="step">
+            <div class="number">1</div>
+            <div class="step-text">
+                Tap the <strong>•••</strong> three dots in the top right.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="number">2</div>
+            <div class="step-text">
+                Select <span class="blue">Open in Browser</span>
+                from the menu.
+            </div>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
